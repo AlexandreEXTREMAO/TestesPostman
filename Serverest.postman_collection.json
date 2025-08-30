@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "53c2fdee-9ad9-43ab-8d45-2cbd962d21bb",
+		"name": "Serverest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45668104",
+		"_collection_link": "https://alexandrematheus-8942633.postman.co/workspace/Alexandre-Matheus's-Workspace~14064874-61d7-4d9a-8295-2aeffe5886e1/collection/45668104-53c2fdee-9ad9-43ab-8d45-2cbd962d21bb?action=share&source=collection_link&creator=45668104"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Logar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"louco@qa.com\",\r\n    \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Cadastrar Usuários",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Louco\",\r\n  \"email\": \"louco@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/usuarios",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Listar Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/produtos",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdWNvQHFhLmNvbSIsInBhc3N3b3JkIjoidGVzdGUiLCJpYXQiOjE3NTY1MTUwMDcsImV4cCI6MTc1NjUxNTYwN30.3l2NGhOqI4aCtB48AjBowjM0pKaayFowcNr1XnuW8DI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"M9 GAMA DOPPLER PH3\",\r\n  \"preco\": \"10000\",\r\n  \"descricao\": \"Skin CS2\",\r\n  \"quantidade\": \"02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/produtos",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdWNvQHFhLmNvbSIsInBhc3N3b3JkIjoidGVzdGUiLCJpYXQiOjE3NTY1MTUwMDcsImV4cCI6MTc1NjUxNTYwN30.3l2NGhOqI4aCtB48AjBowjM0pKaayFowcNr1XnuW8DI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/produtos/pjJvwqCejGXqH5uz",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"produtos",
+								"pjJvwqCejGXqH5uz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
